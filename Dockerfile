@@ -1,3 +1,3 @@
 FROM caddy:2-alpine
 COPY Caddyfile /etc/caddy/Caddyfile
-COPY index.html privacy.html support.html /srv/
+COPY index.html privacy.html support.html app-ads.txt /srv/
