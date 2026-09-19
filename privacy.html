@@ -36,9 +36,9 @@
 <p>Hangi bölümlerin fazla zor olduğunu ve uygulamanın nerede çöktüğünü görebilmek için isimsiz oyun olayları (sürüş bitti, seviye atlandı, günlük ödül alındı, uygulama beklenmedik şekilde kapandı) Google Analytics for Firebase'e gönderilir. Bu olaylar rastgele üretilmiş bir <strong>uygulama kopyası kimliğine</strong> bağlanır; cihaz kimliğiniz, reklam kimliğiniz veya yazdığınız hiçbir şey gönderilmez. <strong>Ayarlar → Anonim kullanım istatistikleri</strong> anahtarıyla bunu istediğiniz zaman tamamen kapatabilirsiniz; oyun aynı şekilde çalışmaya devam eder.</p>
 
 <h2>Reklamlar (Google AdMob)</h2>
-<p>Ödüllü reklamlar Google LLC'nin AdMob hizmetiyle sunulur. Reklamlar <strong>kişiselleştirilmeden</strong> sunulur: uygulama sizi takip etmez ve reklam tanımlayıcınızı (IDFA) kullanmaz. Reklam gösterilirken Google Mobile Ads SDK'sı şu verileri işleyebilir: IP adresi ve yaklaşık konum, cihaz modeli ve işletim sistemi bilgisi, reklam etkileşimleri (gösterim, tıklama, tamamlanma) ve çökme/tanılama verileri. Bu veriler reklam sunmak, ölçmek ve dolandırıcılığı önlemek için Google tarafından işlenir. Ayrıntılar: <a href="https://policies.google.com/privacy">Google Gizlilik Politikası</a> ve <a href="https://policies.google.com/technologies/partner-sites">Google'ın verileri nasıl kullandığı</a>.</p>
+<p>Ödüllü reklamlar Google LLC'nin AdMob hizmetiyle sunulur. Reklam gösterilirken Google Mobile Ads SDK'sı şu verileri işleyebilir: reklam tanımlayıcısı (yalnızca izin verdiyseniz IDFA / Android reklam kimliği), IP adresi ve yaklaşık konum, cihaz modeli ve işletim sistemi bilgisi, reklam etkileşimleri (gösterim, tıklama, tamamlanma) ve çökme/tanılama verileri. Bu veriler reklam sunmak, ölçmek ve dolandırıcılığı önlemek için Google tarafından işlenir. Ayrıntılar: <a href="https://policies.google.com/privacy">Google Gizlilik Politikası</a> ve <a href="https://policies.google.com/technologies/partner-sites">Google'ın verileri nasıl kullandığı</a>.</p>
 <ul>
-  <li><strong>iOS:</strong> Uygulama takip izni (ATT) istemez, çünkü sizi takip etmiyor. Reklamlar her zaman kişiselleştirilmeden gösterilir.</li>
+  <li><strong>iOS:</strong> Uygulama, Apple'ın Uygulama Takibi Şeffaflığı (ATT) iznini sorar. İzin vermezseniz reklamlar kişiselleştirilmeden gösterilir; oyun aynı şekilde çalışır.</li>
   <li><strong>AB/İngiltere:</strong> İlk açılışta Google User Messaging Platform onay formu gösterilir. Tercihinizi daha sonra değiştirmek isterseniz bize yazabilirsiniz.</li>
   <li>Reklamlar yalnızca sonuç ekranında ve devrilme sonrası "reklam izle" düğmesine bastığınızda gösterilir; sürüş sırasında reklam yoktur.</li>
 </ul>
@@ -50,7 +50,7 @@
 <p>Oyun 13 yaş altı çocuklara yönelik değildir ve çocuklardan bilerek kişisel veri toplamaz. Reklam istekleri yalnızca genel izleyici (G) içerik derecelendirmesiyle yapılır.</p>
 
 <h2>Haklarınız</h2>
-<p>Cihazınızdaki verileri uygulamayı silerek kaldırabilirsiniz. Kullanım istatistiklerini Ayarlar → Anonim kullanım istatistikleri ile kapatabilirsiniz. Reklamlar zaten kişiselleştirilmiyor; Android'de reklam kimliğinizi Ayarlar → Google → Reklamlar üzerinden sıfırlayabilirsiniz. <strong>Bulut kaydınızın silinmesini isterseniz</strong> <a href="mailto:info@m2lab.tech">info@m2lab.tech</a> adresine yazın; oyun içi Ayarlar ekranının altındaki tanılama satırında görünen hesap kimliğini eklerseniz kaydı en geç 30 gün içinde sileriz. Google'ın işlediği verilerle ilgili talepler için Google'ın gizlilik araçlarını da kullanabilirsiniz.</p>
+<p>Cihazınızdaki verileri uygulamayı silerek kaldırabilirsiniz. Kullanım istatistiklerini Ayarlar → Anonim kullanım istatistikleri ile kapatabilirsiniz. Reklam kişiselleştirmesini iOS'ta Ayarlar → Gizlilik ve Güvenlik → Takip, Android'de Ayarlar → Google → Reklamlar üzerinden kapatabilirsiniz. <strong>Bulut kaydınızın silinmesini isterseniz</strong> <a href="mailto:info@m2lab.tech">info@m2lab.tech</a> adresine yazın; oyun içi Ayarlar ekranının altındaki tanılama satırında görünen hesap kimliğini eklerseniz kaydı en geç 30 gün içinde sileriz. Google'ın işlediği verilerle ilgili talepler için Google'ın gizlilik araçlarını da kullanabilirsiniz.</p>
 
 <h2>Değişiklikler</h2>
 <p>Bu politika değiştiğinde bu sayfa güncellenir ve tarih yenilenir.</p>
@@ -76,9 +76,9 @@
 <p>So we can see which stages are too hard and where the app crashes, nameless gameplay events (a drive finished, a level gained, a daily reward claimed, the app closed unexpectedly) are sent to Google Analytics for Firebase. They are tied to a randomly generated <strong>app instance ID</strong>; your device ID, your advertising ID and anything you typed are never sent. You can switch this off completely at any time under <strong>Settings → Anonymous usage statistics</strong>, and the game keeps working exactly the same.</p>
 
 <h2>Advertising (Google AdMob)</h2>
-<p>Rewarded ads are served by AdMob, a service of Google LLC. Ads are served <strong>without personalisation</strong>: the app does not track you and does not use your advertising identifier (IDFA). While serving ads, the Google Mobile Ads SDK may process: IP address and coarse location, device model and OS information, ad interactions (impressions, clicks, completions) and crash/diagnostic data. Google processes this data to serve and measure ads and to prevent fraud. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from partners</a>.</p>
+<p>Rewarded ads are served by AdMob, a service of Google LLC. While serving ads, the Google Mobile Ads SDK may process: the advertising identifier (IDFA / Android advertising ID, only if you allow it), IP address and coarse location, device model and OS information, ad interactions (impressions, clicks, completions) and crash/diagnostic data. Google processes this data to serve and measure ads and to prevent fraud. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from partners</a>.</p>
 <ul>
-  <li><strong>iOS:</strong> The app does not ask for App Tracking Transparency permission, because it does not track you. Ads are always shown without personalisation.</li>
+  <li><strong>iOS:</strong> The app asks for App Tracking Transparency permission. If you decline, ads are shown without personalisation and the game works exactly the same.</li>
   <li><strong>EU/UK:</strong> A Google User Messaging Platform consent form is shown on first launch. Contact us if you want to change your choice later.</li>
   <li>Ads appear only on the result screen and after a crash when you tap a "watch ad" button; there are no ads while driving.</li>
 </ul>
@@ -90,7 +90,7 @@
 <p>The game is not directed to children under 13 and does not knowingly collect personal data from children. Ad requests use the general‑audience (G) content rating.</p>
 
 <h2>Your rights</h2>
-<p>You can remove on‑device data by deleting the app. You can turn usage statistics off under Settings → Anonymous usage statistics. Ads are already non-personalised; on Android you can reset your advertising ID under Settings → Google → Ads. <strong>To have your cloud save deleted</strong>, write to <a href="mailto:info@m2lab.tech">info@m2lab.tech</a>; include the account ID shown in the diagnostics line at the bottom of the in‑game Settings screen and we will delete it within 30 days. For requests about data processed by Google, you can also use Google's privacy tools.</p>
+<p>You can remove on‑device data by deleting the app. You can turn usage statistics off under Settings → Anonymous usage statistics. You can turn off ad personalisation in iOS Settings → Privacy &amp; Security → Tracking, or on Android in Settings → Google → Ads. <strong>To have your cloud save deleted</strong>, write to <a href="mailto:info@m2lab.tech">info@m2lab.tech</a>; include the account ID shown in the diagnostics line at the bottom of the in‑game Settings screen and we will delete it within 30 days. For requests about data processed by Google, you can also use Google's privacy tools.</p>
 
 <h2>Changes</h2>
 <p>When this policy changes, this page is updated and the date is refreshed.</p>
