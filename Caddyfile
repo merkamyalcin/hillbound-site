@@ -1,3 +1,25 @@
 :{$PORT}
+
+# Hillbound's legal and support pages now live on m2lab.tech with every other M2Lab app.
+# This service stays up only because live App Store versions still point here: app-ads.txt must
+# keep being served from this host for AdMob's crawler, everything else redirects.
 root * /srv
-file_server
+
+@appads path /app-ads.txt
+handle @appads {
+	file_server
+}
+
+@tr header_regexp Accept-Language ^tr
+handle /privacy* {
+	redir @tr https://m2lab.tech/tr/hillbound/gizlilik/ 301
+	redir https://m2lab.tech/en/hillbound/privacy/ 301
+}
+handle /support* {
+	redir @tr https://m2lab.tech/tr/hillbound/destek/ 301
+	redir https://m2lab.tech/en/hillbound/support/ 301
+}
+handle {
+	redir @tr https://m2lab.tech/tr/hillbound/destek/ 301
+	redir https://m2lab.tech/en/hillbound/support/ 301
+}
